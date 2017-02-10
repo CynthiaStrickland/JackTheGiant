@@ -49,6 +49,7 @@
 		81A6236A1E4D854D008555DB /* Options Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 81A623641E4D854D008555DB /* Options Button.png */; };
 		81A6236B1E4D854D008555DB /* Quit Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 81A623651E4D854D008555DB /* Quit Button.png */; };
 		81A6236C1E4D854D008555DB /* Start Game Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 81A623661E4D854D008555DB /* Start Game Button.png */; };
+		81A623701E4D8624008555DB /* Player.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 81A6236F1E4D8624008555DB /* Player.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		81A623641E4D854D008555DB /* Options Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Options Button.png"; sourceTree = "<group>"; };
 		81A623651E4D854D008555DB /* Quit Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Quit Button.png"; sourceTree = "<group>"; };
 		81A623661E4D854D008555DB /* Start Game Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start Game Button.png"; sourceTree = "<group>"; };
+		81A6236F1E4D8624008555DB /* Player.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Player.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				81A622EF1E4D7EFD008555DB /* Products */,
 				81A623031E4D7EFE008555DB /* Info.plist */,
 				81A622FE1E4D7EFD008555DB /* Assets.xcassets */,
+				81A6236F1E4D8624008555DB /* Player.atlas */,
 			);
 			sourceTree = "<group>";
 		};
@@ -441,6 +444,7 @@
 				81A6235C1E4D8541008555DB /* Back Button.png in Resources */,
 				81A6235D1E4D8541008555DB /* Check Sign.png in Resources */,
 				81A623341E4D846F008555DB /* Menu BG.png in Resources */,
+				81A623701E4D8624008555DB /* Player.atlas in Resources */,
 				81A6232C1E4D8454008555DB /* Life Sound.wav in Resources */,
 				81A6232A1E4D8454008555DB /* Click Sound.wav in Resources */,
 				81A623601E4D8541008555DB /* Medium Button.png in Resources */,
