@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8148B87C1E4FAC6D009B07E9 /* GamePlayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8148B87B1E4FAC6C009B07E9 /* GamePlayScene.sks */; };
 		81A622F21E4D7EFD008555DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A622F11E4D7EFD008555DB /* AppDelegate.swift */; };
-		81A622F41E4D7EFD008555DB /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 81A622F31E4D7EFD008555DB /* GameScene.sks */; };
 		81A622F61E4D7EFD008555DB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 81A622F51E4D7EFD008555DB /* Actions.sks */; };
 		81A622F81E4D7EFD008555DB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A622F71E4D7EFD008555DB /* GameScene.swift */; };
 		81A622FA1E4D7EFD008555DB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A622F91E4D7EFD008555DB /* GameViewController.swift */; };
@@ -71,9 +71,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8148B87B1E4FAC6C009B07E9 /* GamePlayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GamePlayScene.sks; sourceTree = "<group>"; };
 		81A622EE1E4D7EFD008555DB /* JackTheGiant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JackTheGiant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A622F11E4D7EFD008555DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = JackTheGiant/AppDelegate.swift; sourceTree = "<group>"; };
-		81A622F31E4D7EFD008555DB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		81A622F51E4D7EFD008555DB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		81A622F71E4D7EFD008555DB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		81A622F91E4D7EFD008555DB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = JackTheGiant/GameViewController.swift; sourceTree = "<group>"; };
@@ -186,9 +186,9 @@
 		81A622F01E4D7EFD008555DB /* SCENES */ = {
 			isa = PBXGroup;
 			children = (
-				81A622F31E4D7EFD008555DB /* GameScene.sks */,
 				81A622F51E4D7EFD008555DB /* Actions.sks */,
 				81A622F71E4D7EFD008555DB /* GameScene.swift */,
+				8148B87B1E4FAC6C009B07E9 /* GamePlayScene.sks */,
 			);
 			name = SCENES;
 			path = JackTheGiant;
@@ -427,10 +427,10 @@
 				81A623741E4E972D008555DB /* JackTheGiantAppIcons in Resources */,
 				81A623551E4D8535008555DB /* Ready.png in Resources */,
 				81A622FD1E4D7EFD008555DB /* Main.storyboard in Resources */,
+				8148B87C1E4FAC6D009B07E9 /* GamePlayScene.sks in Resources */,
 				81A6236A1E4D854D008555DB /* Options Button.png in Resources */,
 				81A6235F1E4D8541008555DB /* Hard Button.png in Resources */,
 				81A623401E4D84A9008555DB /* Cloud 2.png in Resources */,
-				81A622F41E4D7EFD008555DB /* GameScene.sks in Resources */,
 				81A623351E4D846F008555DB /* Options BG.png in Resources */,
 				81A622FF1E4D7EFD008555DB /* Assets.xcassets in Resources */,
 				81A6234D1E4D850C008555DB /* Quit Button 2.png in Resources */,
@@ -741,6 +741,7 @@
 				81A6231E1E4D7EFE008555DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81A6231F1E4D7EFE008555DB /* Build configuration list for PBXNativeTarget "JackTheGiantTests" */ = {
 			isa = XCConfigurationList;
@@ -749,6 +750,7 @@
 				81A623211E4D7EFE008555DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81A623221E4D7EFE008555DB /* Build configuration list for PBXNativeTarget "JackTheGiantUITests" */ = {
 			isa = XCConfigurationList;
@@ -757,6 +759,7 @@
 				81A623241E4D7EFE008555DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
