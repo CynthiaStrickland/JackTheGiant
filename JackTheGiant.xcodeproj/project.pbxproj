@@ -50,6 +50,7 @@
 		81A6236B1E4D854D008555DB /* Quit Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 81A623651E4D854D008555DB /* Quit Button.png */; };
 		81A6236C1E4D854D008555DB /* Start Game Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 81A623661E4D854D008555DB /* Start Game Button.png */; };
 		81A623701E4D8624008555DB /* Player.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 81A6236F1E4D8624008555DB /* Player.atlas */; };
+		81A623741E4E972D008555DB /* JackTheGiantAppIcons in Resources */ = {isa = PBXBuildFile; fileRef = 81A623731E4E972D008555DB /* JackTheGiantAppIcons */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		81A623651E4D854D008555DB /* Quit Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Quit Button.png"; sourceTree = "<group>"; };
 		81A623661E4D854D008555DB /* Start Game Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start Game Button.png"; sourceTree = "<group>"; };
 		81A6236F1E4D8624008555DB /* Player.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Player.atlas; sourceTree = "<group>"; };
+		81A623731E4E972D008555DB /* JackTheGiantAppIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JackTheGiantAppIcons; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				81A622EF1E4D7EFD008555DB /* Products */,
 				81A623031E4D7EFE008555DB /* Info.plist */,
 				81A622FE1E4D7EFD008555DB /* Assets.xcassets */,
+				81A623731E4E972D008555DB /* JackTheGiantAppIcons */,
 				81A6236F1E4D8624008555DB /* Player.atlas */,
 			);
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				81A6234C1E4D850C008555DB /* Pause Menu.png in Resources */,
 				81A623451E4D84DA008555DB /* Coin.png in Resources */,
 				81A623421E4D84A9008555DB /* Dark Cloud.png in Resources */,
+				81A623741E4E972D008555DB /* JackTheGiantAppIcons in Resources */,
 				81A623551E4D8535008555DB /* Ready.png in Resources */,
 				81A622FD1E4D7EFD008555DB /* Main.storyboard in Resources */,
 				81A6236A1E4D854D008555DB /* Options Button.png in Resources */,
