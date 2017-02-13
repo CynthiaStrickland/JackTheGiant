@@ -51,6 +51,8 @@
 		81A6236C1E4D854D008555DB /* Start Game Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 81A623661E4D854D008555DB /* Start Game Button.png */; };
 		81A623701E4D8624008555DB /* Player.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 81A6236F1E4D8624008555DB /* Player.atlas */; };
 		81A623741E4E972D008555DB /* JackTheGiantAppIcons in Resources */ = {isa = PBXBuildFile; fileRef = 81A623731E4E972D008555DB /* JackTheGiantAppIcons */; };
+		81F32AAB1E4FB1A9004023A3 /* GamePlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F32AAA1E4FB1A9004023A3 /* GamePlayScene.swift */; };
+		81F32AAE1E4FB655004023A3 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F32AAD1E4FB655004023A3 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +77,7 @@
 		81A622EE1E4D7EFD008555DB /* JackTheGiant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JackTheGiant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A622F11E4D7EFD008555DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = JackTheGiant/AppDelegate.swift; sourceTree = "<group>"; };
 		81A622F51E4D7EFD008555DB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		81A622F71E4D7EFD008555DB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		81A622F71E4D7EFD008555DB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = JackTheGiant/GameScene.swift; sourceTree = "<group>"; };
 		81A622F91E4D7EFD008555DB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = JackTheGiant/GameViewController.swift; sourceTree = "<group>"; };
 		81A622FC1E4D7EFD008555DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81A622FE1E4D7EFD008555DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = JackTheGiant/Assets.xcassets; sourceTree = "<group>"; };
@@ -122,6 +124,8 @@
 		81A623661E4D854D008555DB /* Start Game Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start Game Button.png"; sourceTree = "<group>"; };
 		81A6236F1E4D8624008555DB /* Player.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Player.atlas; sourceTree = "<group>"; };
 		81A623731E4E972D008555DB /* JackTheGiantAppIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JackTheGiantAppIcons; sourceTree = "<group>"; };
+		81F32AAA1E4FB1A9004023A3 /* GamePlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GamePlayScene.swift; path = JackTheGiant/GamePlayScene.swift; sourceTree = "<group>"; };
+		81F32AAD1E4FB655004023A3 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,16 +157,10 @@
 			isa = PBXGroup;
 			children = (
 				81A622F11E4D7EFD008555DB /* AppDelegate.swift */,
-				81A623501E4D8521008555DB /* BUTTONS */,
-				81A623471E4D84F6008555DB /* PAUSE PANEL & BUTTONS */,
-				81A6233A1E4D8498008555DB /* COLLECTIBLES */,
-				81A623391E4D8491008555DB /* CLOUDS */,
-				81A623381E4D848A008555DB /* FONTS */,
-				81A623371E4D8485008555DB /* MUSIC */,
-				81A623361E4D847D008555DB /* BACKGROUNDS */,
 				81A622F01E4D7EFD008555DB /* SCENES */,
-				81A6236E1E4D85BE008555DB /* CONTROLLER */,
+				81A6236E1E4D85BE008555DB /* GAME CLASSES */,
 				81A6236D1E4D856F008555DB /* VIEW */,
+				81F32AA91E4FB140004023A3 /* ASSETS */,
 				81A6230B1E4D7EFE008555DB /* JackTheGiantTests */,
 				81A623161E4D7EFE008555DB /* JackTheGiantUITests */,
 				81A622EF1E4D7EFD008555DB /* Products */,
@@ -187,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				81A622F51E4D7EFD008555DB /* Actions.sks */,
-				81A622F71E4D7EFD008555DB /* GameScene.swift */,
 				8148B87B1E4FAC6C009B07E9 /* GamePlayScene.sks */,
 			);
 			name = SCENES;
@@ -303,12 +300,37 @@
 			name = VIEW;
 			sourceTree = "<group>";
 		};
-		81A6236E1E4D85BE008555DB /* CONTROLLER */ = {
+		81A6236E1E4D85BE008555DB /* GAME CLASSES */ = {
 			isa = PBXGroup;
 			children = (
+				81F32AAC1E4FB637004023A3 /* PLAYER CLASSES */,
+				81A622F71E4D7EFD008555DB /* GameScene.swift */,
+				81F32AAA1E4FB1A9004023A3 /* GamePlayScene.swift */,
 				81A622F91E4D7EFD008555DB /* GameViewController.swift */,
 			);
-			name = CONTROLLER;
+			name = "GAME CLASSES";
+			sourceTree = "<group>";
+		};
+		81F32AA91E4FB140004023A3 /* ASSETS */ = {
+			isa = PBXGroup;
+			children = (
+				81A623501E4D8521008555DB /* BUTTONS */,
+				81A623471E4D84F6008555DB /* PAUSE PANEL & BUTTONS */,
+				81A6233A1E4D8498008555DB /* COLLECTIBLES */,
+				81A623391E4D8491008555DB /* CLOUDS */,
+				81A623381E4D848A008555DB /* FONTS */,
+				81A623371E4D8485008555DB /* MUSIC */,
+				81A623361E4D847D008555DB /* BACKGROUNDS */,
+			);
+			name = ASSETS;
+			sourceTree = "<group>";
+		};
+		81F32AAC1E4FB637004023A3 /* PLAYER CLASSES */ = {
+			isa = PBXGroup;
+			children = (
+				81F32AAD1E4FB655004023A3 /* Player.swift */,
+			);
+			name = "PLAYER CLASSES";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,8 +506,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F32AAB1E4FB1A9004023A3 /* GamePlayScene.swift in Sources */,
 				81A622F81E4D7EFD008555DB /* GameScene.swift in Sources */,
 				81A622FA1E4D7EFD008555DB /* GameViewController.swift in Sources */,
+				81F32AAE1E4FB655004023A3 /* Player.swift in Sources */,
 				81A622F21E4D7EFD008555DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
