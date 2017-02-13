@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8148B87C1E4FAC6D009B07E9 /* GamePlayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8148B87B1E4FAC6C009B07E9 /* GamePlayScene.sks */; };
+		8148B87C1E4FAC6D009B07E9 /* GameplayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8148B87B1E4FAC6C009B07E9 /* GameplayScene.sks */; };
 		81A622F21E4D7EFD008555DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A622F11E4D7EFD008555DB /* AppDelegate.swift */; };
 		81A622F61E4D7EFD008555DB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 81A622F51E4D7EFD008555DB /* Actions.sks */; };
 		81A622F81E4D7EFD008555DB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A622F71E4D7EFD008555DB /* GameScene.swift */; };
@@ -51,7 +51,7 @@
 		81A6236C1E4D854D008555DB /* Start Game Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 81A623661E4D854D008555DB /* Start Game Button.png */; };
 		81A623701E4D8624008555DB /* Player.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 81A6236F1E4D8624008555DB /* Player.atlas */; };
 		81A623741E4E972D008555DB /* JackTheGiantAppIcons in Resources */ = {isa = PBXBuildFile; fileRef = 81A623731E4E972D008555DB /* JackTheGiantAppIcons */; };
-		81F32AAB1E4FB1A9004023A3 /* GamePlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F32AAA1E4FB1A9004023A3 /* GamePlayScene.swift */; };
+		81F32AAB1E4FB1A9004023A3 /* GameplayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F32AAA1E4FB1A9004023A3 /* GameplayScene.swift */; };
 		81F32AAE1E4FB655004023A3 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F32AAD1E4FB655004023A3 /* Player.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,7 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8148B87B1E4FAC6C009B07E9 /* GamePlayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GamePlayScene.sks; sourceTree = "<group>"; };
+		8148B87B1E4FAC6C009B07E9 /* GameplayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameplayScene.sks; sourceTree = "<group>"; };
 		81A622EE1E4D7EFD008555DB /* JackTheGiant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JackTheGiant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A622F11E4D7EFD008555DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = JackTheGiant/AppDelegate.swift; sourceTree = "<group>"; };
 		81A622F51E4D7EFD008555DB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		81A623661E4D854D008555DB /* Start Game Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Start Game Button.png"; sourceTree = "<group>"; };
 		81A6236F1E4D8624008555DB /* Player.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Player.atlas; sourceTree = "<group>"; };
 		81A623731E4E972D008555DB /* JackTheGiantAppIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JackTheGiantAppIcons; sourceTree = "<group>"; };
-		81F32AAA1E4FB1A9004023A3 /* GamePlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GamePlayScene.swift; path = JackTheGiant/GamePlayScene.swift; sourceTree = "<group>"; };
+		81F32AAA1E4FB1A9004023A3 /* GameplayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameplayScene.swift; path = JackTheGiant/GameplayScene.swift; sourceTree = "<group>"; };
 		81F32AAD1E4FB655004023A3 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				81A622F51E4D7EFD008555DB /* Actions.sks */,
-				8148B87B1E4FAC6C009B07E9 /* GamePlayScene.sks */,
+				8148B87B1E4FAC6C009B07E9 /* GameplayScene.sks */,
 			);
 			name = SCENES;
 			path = JackTheGiant;
@@ -305,7 +305,7 @@
 			children = (
 				81F32AAC1E4FB637004023A3 /* PLAYER CLASSES */,
 				81A622F71E4D7EFD008555DB /* GameScene.swift */,
-				81F32AAA1E4FB1A9004023A3 /* GamePlayScene.swift */,
+				81F32AAA1E4FB1A9004023A3 /* GameplayScene.swift */,
 				81A622F91E4D7EFD008555DB /* GameViewController.swift */,
 			);
 			name = "GAME CLASSES";
@@ -449,7 +449,7 @@
 				81A623741E4E972D008555DB /* JackTheGiantAppIcons in Resources */,
 				81A623551E4D8535008555DB /* Ready.png in Resources */,
 				81A622FD1E4D7EFD008555DB /* Main.storyboard in Resources */,
-				8148B87C1E4FAC6D009B07E9 /* GamePlayScene.sks in Resources */,
+				8148B87C1E4FAC6D009B07E9 /* GameplayScene.sks in Resources */,
 				81A6236A1E4D854D008555DB /* Options Button.png in Resources */,
 				81A6235F1E4D8541008555DB /* Hard Button.png in Resources */,
 				81A623401E4D84A9008555DB /* Cloud 2.png in Resources */,
@@ -506,7 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81F32AAB1E4FB1A9004023A3 /* GamePlayScene.swift in Sources */,
+				81F32AAB1E4FB1A9004023A3 /* GameplayScene.swift in Sources */,
 				81A622F81E4D7EFD008555DB /* GameScene.swift in Sources */,
 				81A622FA1E4D7EFD008555DB /* GameViewController.swift in Sources */,
 				81F32AAE1E4FB655004023A3 /* Player.swift in Sources */,

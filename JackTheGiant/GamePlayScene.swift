@@ -1,5 +1,5 @@
 //
-//  GamePlayScene.swift
+//  GameplayScene.swift
 //  JackTheGiant
 //
 //  Created by Cynthia Whitlatch on 2/11/17.
@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class GamePlayScene: SKScene {
+class GameplayScene: SKScene {
     
     var player: Player?
     var canMove = false
