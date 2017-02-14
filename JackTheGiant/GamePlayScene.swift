@@ -24,13 +24,12 @@ class GameplayScene: SKScene {
     
     var center: CGFloat?
     var distanceBetweenClouds = CGFloat(240)
-    let minX = CGFloat(85)
-    let maxX = CGFloat(392)
+    let minX = CGFloat(-157)
+    let maxX = CGFloat(157)
 
     
     override func didMove(to view: SKView) {
         initializeVariables()
-        
     }
 
     override func update(_ currentTime: TimeInterval) {
@@ -74,6 +73,7 @@ class GameplayScene: SKScene {
         
         cloudsController.arrangeCloudsInScene(scene: self.scene!, distaneBetweenClouds: distanceBetweenClouds, center: center!, minX: minX, maxX: maxX, player: player!, initialClouds: true)
         
+        print("The random number is \(cloudsController.randomBetweenNumbers(firstNum: 2, secondNum: 5))")
     }
     
     func getBackgrounds() {

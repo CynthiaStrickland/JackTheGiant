@@ -12,6 +12,29 @@ class CloudsController {
 
     var lastCloudPositionY = CGFloat()
 
+    func shuffle(cloudsArray:[SKSpriteNode]) -> [SKSpriteNode] {
+        /* This function takes and argument and returns a value.  It takes an array, cloudsArray, which is going to be a type of SpriteNodes.  It's going to return and array of SKSpriteNode.  
+         
+         Iterate through the array and count the items in the array and decrement it.   Swap does just that.  It just swaps the places of the arrays shuffledArray[i] and shuffledArray[j].    */
+        
+        var shuffledArray = cloudsArray
+        
+        for i in 0..<shuffledArray.count {
+            let j = Int(arc4random_uniform(UInt32(shuffledArray.count - i))) + i;   //This gives a random number
+            if i == j {continue}
+            swap(&shuffledArray[i], &shuffledArray[j]);
+        }
+        
+        return shuffledArray
+    }
+    
+    func randomBetweenNumbers(firstNum:CGFloat, secondNum:CGFloat) -> CGFloat {
+        
+        
+        return CGFloat(arc4random()) / CGFloat(UINT32_MAX) * abs(firstNum - secondNum) + min(firstNum, secondNum)
+                    //Here you are doing some calculations and getting a randome number to be applied to the x-position
+    }
+    
     func createClouds() -> [SKSpriteNode] {
         
         var clouds = [SKSpriteNode]()
@@ -46,6 +69,9 @@ class CloudsController {
             clouds.append(cloud2)
             clouds.append(cloud3)
             clouds.append(darkCloud)
+            
+            clouds = shuffle(cloudsArray: clouds)   //Shuffles the clouds
+            
         }
         
         return clouds
@@ -57,7 +83,7 @@ class CloudsController {
         
         if initialClouds {
             while clouds[0].name == "Dark Cloud" {
-//            clouds = shuffle(cloudsArray: clouds);
+            clouds = shuffle(cloudsArray: clouds);
             }
         }
         
@@ -69,11 +95,21 @@ class CloudsController {
             positionY = lastCloudPositionY
         }
     
-//        var random = 0
+        var random = 0
     
         for i in 0...clouds.count - 1 {
             
-            clouds[i].position = CGPoint(x: 0, y: positionY)
+            var randomX = CGFloat()
+            
+            if random == 0 {
+                randomX = randomBetweenNumbers(firstNum: center + 10, secondNum: maxX)
+                random = 1
+            } else if random == 1 {
+                randomX = randomBetweenNumbers(firstNum: center - 10, secondNum: minX)
+                random = 0
+            }
+            
+            clouds[i].position = CGPoint(x: randomX, y: positionY)
             clouds[i].zPosition = 3
             
             scene.addChild(clouds[i])
