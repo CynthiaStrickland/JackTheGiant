@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		812854FA1E52B9C7004389D8 /* Player 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 812854F91E52B9C7004389D8 /* Player 1.png */; };
+		812854FC1E52B9D8004389D8 /* Player 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 812854FB1E52B9D8004389D8 /* Player 2.png */; };
+		812854FE1E52B9E5004389D8 /* Player 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 812854FD1E52B9E5004389D8 /* Player 3.png */; };
+		812855001E52B9EE004389D8 /* Player 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 812854FF1E52B9EE004389D8 /* Player 4.png */; };
+		812855021E52B9F8004389D8 /* Player 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 812855011E52B9F8004389D8 /* Player 5.png */; };
+		812855041E52BA01004389D8 /* Player 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 812855031E52BA01004389D8 /* Player 6.png */; };
+		812855061E52BA0A004389D8 /* Player 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 812855051E52BA0A004389D8 /* Player 7.png */; };
+		812855081E52BA15004389D8 /* Player 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 812855071E52BA15004389D8 /* Player 8.png */; };
+		8128550A1E52BAA9004389D8 /* Player.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 812855091E52BAA9004389D8 /* Player.atlas */; };
 		8148B87C1E4FAC6D009B07E9 /* GameplayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8148B87B1E4FAC6C009B07E9 /* GameplayScene.sks */; };
 		81A622F21E4D7EFD008555DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A622F11E4D7EFD008555DB /* AppDelegate.swift */; };
 		81A622F61E4D7EFD008555DB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 81A622F51E4D7EFD008555DB /* Actions.sks */; };
@@ -73,6 +82,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		812854F91E52B9C7004389D8 /* Player 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Player 1.png"; path = "JackTheGiant/Assets.xcassets/Player 1.imageset/Player 1.png"; sourceTree = "<group>"; };
+		812854FB1E52B9D8004389D8 /* Player 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Player 2.png"; path = "JackTheGiant/Assets.xcassets/Player 2.imageset/Player 2.png"; sourceTree = "<group>"; };
+		812854FD1E52B9E5004389D8 /* Player 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Player 3.png"; path = "JackTheGiant/Assets.xcassets/Player 3.imageset/Player 3.png"; sourceTree = "<group>"; };
+		812854FF1E52B9EE004389D8 /* Player 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Player 4.png"; path = "JackTheGiant/Assets.xcassets/Player 4.imageset/Player 4.png"; sourceTree = "<group>"; };
+		812855011E52B9F8004389D8 /* Player 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Player 5.png"; path = "JackTheGiant/Assets.xcassets/Player 5.imageset/Player 5.png"; sourceTree = "<group>"; };
+		812855031E52BA01004389D8 /* Player 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Player 6.png"; path = "JackTheGiant/Assets.xcassets/Player 6.imageset/Player 6.png"; sourceTree = "<group>"; };
+		812855051E52BA0A004389D8 /* Player 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Player 7.png"; path = "JackTheGiant/Assets.xcassets/Player 7.imageset/Player 7.png"; sourceTree = "<group>"; };
+		812855071E52BA15004389D8 /* Player 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Player 8.png"; path = "JackTheGiant/Assets.xcassets/Player 8.imageset/Player 8.png"; sourceTree = "<group>"; };
+		812855091E52BAA9004389D8 /* Player.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Player.atlas; sourceTree = "<group>"; };
 		8148B87B1E4FAC6C009B07E9 /* GameplayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameplayScene.sks; sourceTree = "<group>"; };
 		81A622EE1E4D7EFD008555DB /* JackTheGiant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JackTheGiant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A622F11E4D7EFD008555DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = JackTheGiant/AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +171,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		812854F81E52B9A9004389D8 /* PLAYER */ = {
+			isa = PBXGroup;
+			children = (
+				812854F91E52B9C7004389D8 /* Player 1.png */,
+				812854FB1E52B9D8004389D8 /* Player 2.png */,
+				812854FD1E52B9E5004389D8 /* Player 3.png */,
+				812854FF1E52B9EE004389D8 /* Player 4.png */,
+				812855011E52B9F8004389D8 /* Player 5.png */,
+				812855031E52BA01004389D8 /* Player 6.png */,
+				812855051E52BA0A004389D8 /* Player 7.png */,
+				812855071E52BA15004389D8 /* Player 8.png */,
+			);
+			name = PLAYER;
+			sourceTree = "<group>";
+		};
 		81A622E51E4D7EFD008555DB = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +347,8 @@
 		81F32AA91E4FB140004023A3 /* ASSETS */ = {
 			isa = PBXGroup;
 			children = (
+				812855091E52BAA9004389D8 /* Player.atlas */,
+				812854F81E52B9A9004389D8 /* PLAYER */,
 				81A623501E4D8521008555DB /* BUTTONS */,
 				81A623471E4D84F6008555DB /* PAUSE PANEL & BUTTONS */,
 				81A6233A1E4D8498008555DB /* COLLECTIBLES */,
@@ -444,27 +479,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				81A6234C1E4D850C008555DB /* Pause Menu.png in Resources */,
+				812855061E52BA0A004389D8 /* Player 7.png in Resources */,
 				81A623451E4D84DA008555DB /* Coin.png in Resources */,
 				81A623421E4D84A9008555DB /* Dark Cloud.png in Resources */,
 				81A623741E4E972D008555DB /* JackTheGiantAppIcons in Resources */,
 				81A623551E4D8535008555DB /* Ready.png in Resources */,
+				812854FE1E52B9E5004389D8 /* Player 3.png in Resources */,
 				81A622FD1E4D7EFD008555DB /* Main.storyboard in Resources */,
 				8148B87C1E4FAC6D009B07E9 /* GameplayScene.sks in Resources */,
 				81A6236A1E4D854D008555DB /* Options Button.png in Resources */,
 				81A6235F1E4D8541008555DB /* Hard Button.png in Resources */,
 				81A623401E4D84A9008555DB /* Cloud 2.png in Resources */,
+				8128550A1E52BAA9004389D8 /* Player.atlas in Resources */,
 				81A623351E4D846F008555DB /* Options BG.png in Resources */,
 				81A622FF1E4D7EFD008555DB /* Assets.xcassets in Resources */,
 				81A6234D1E4D850C008555DB /* Quit Button 2.png in Resources */,
 				81A623291E4D8454008555DB /* Background music.mp3 in Resources */,
 				81A6232B1E4D8454008555DB /* Coin Sound.wav in Resources */,
 				81A623331E4D846F008555DB /* Highscore BG.png in Resources */,
+				812855041E52BA01004389D8 /* Player 6.png in Resources */,
+				812855021E52B9F8004389D8 /* Player 5.png in Resources */,
 				81A623461E4D84DA008555DB /* Life.png in Resources */,
 				81A623681E4D854D008555DB /* Music Off Button.png in Resources */,
 				81A623541E4D8535008555DB /* Pause Button.png in Resources */,
 				81A623411E4D84A9008555DB /* Cloud 3.png in Resources */,
 				81A623321E4D846F008555DB /* Game BG.png in Resources */,
 				81A623021E4D7EFD008555DB /* LaunchScreen.storyboard in Resources */,
+				812855001E52B9EE004389D8 /* Player 4.png in Resources */,
 				81A6236B1E4D854D008555DB /* Quit Button.png in Resources */,
 				81A6234F1E4D850C008555DB /* Show Score.png in Resources */,
 				81A6235C1E4D8541008555DB /* Back Button.png in Resources */,
@@ -479,7 +520,10 @@
 				81A6233F1E4D84A9008555DB /* Cloud 1.png in Resources */,
 				81A623691E4D854D008555DB /* Music On Button.png in Resources */,
 				81A622F61E4D7EFD008555DB /* Actions.sks in Resources */,
+				812854FC1E52B9D8004389D8 /* Player 2.png in Resources */,
 				81A6234E1E4D850C008555DB /* Resume Button.png in Resources */,
+				812854FA1E52B9C7004389D8 /* Player 1.png in Resources */,
+				812855081E52BA15004389D8 /* Player 8.png in Resources */,
 				81A623671E4D854D008555DB /* Highscore Button.png in Resources */,
 				81A6236C1E4D854D008555DB /* Start Game Button.png in Resources */,
 			);
