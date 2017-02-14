@@ -10,15 +10,13 @@ import SpriteKit
 
 class CloudsController {
 
-//    let collectablesController = CollectablesController();
     var lastCloudPositionY = CGFloat()
-    
-    
+
     func createClouds() -> [SKSpriteNode] {
-        var clouds = [SKSpriteNode]()
-        var lastCloudPositionY = CGFloat()
         
-        for var i in 0..2 {
+        var clouds = [SKSpriteNode]()
+        
+        for _ in 0...2 {
             let cloud1 = SKSpriteNode(imageNamed: "Cloud 1")
             cloud1.name = "1"
                     //Adding names because they need to be removed for memory efficiency
@@ -71,7 +69,7 @@ class CloudsController {
             positionY = lastCloudPositionY
         }
     
-        var random = 0
+//        var random = 0
     
         for i in 0...clouds.count - 1 {
             

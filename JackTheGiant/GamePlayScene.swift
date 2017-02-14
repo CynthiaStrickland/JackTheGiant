@@ -8,18 +8,20 @@
 
 import SpriteKit
 
+let cloudsController = CloudsController()
+
 class GameplayScene: SKScene {
     
-    var cloudsController = CloudsController()
     var mainCamera: SKCameraNode?
-    
+    var player: Player?
+
     var bg1: BGClass?
     var bg2: BGClass?
     var bg3: BGClass?
     
-    var player: Player?
     var canMove = false
     var moveLeft = false
+    
     var center: CGFloat?
     var distanceBetweenClouds = CGFloat(240)
     let minX = CGFloat(85)
@@ -70,7 +72,8 @@ class GameplayScene: SKScene {
         
         getBackgrounds()
         
-        CloudsController.arrangeCloudsInSchene(self.scene, distanceBetweenClouds: distanceBetweenClouds, center: center, minX: minX, maxX: maxX, initialClouds: true   )
+        cloudsController.arrangeCloudsInScene(scene: self.scene!, distaneBetweenClouds: distanceBetweenClouds, center: center!, minX: minX, maxX: maxX, player: player!, initialClouds: true)
+        
     }
     
     func getBackgrounds() {
