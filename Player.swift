@@ -27,6 +27,13 @@ class Player: SKSpriteNode {
         
     }
     
+    func animatePlayer() {
+        self.run(SKAction.repeatForever(animatePlayerAction), withKey: "Animate")
+    }
+    
+    func stopPlayerAnimation() {
+            self.removeAction(forKey: "Animate")
+    }
     
     func movePlayer(moveLeft: Bool) {
         
