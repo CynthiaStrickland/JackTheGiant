@@ -62,8 +62,28 @@ class CloudsController {
             
             darkCloud.xScale = 0.9
             darkCloud.yScale = 0.9
-            
+
             //add Physics bodies to the clouds
+            cloud1.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: cloud1.size.width, height: cloud1.size.height))
+            cloud1.physicsBody?.affectedByGravity = false
+            cloud1.physicsBody?.contactTestBitMask = ColliderType.cloud
+            cloud1.physicsBody?.collisionBitMask = ColliderType.player
+            
+            
+            cloud2.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: cloud2.size.width, height: cloud2.size.height))
+            cloud2.physicsBody?.affectedByGravity = false
+            cloud2.physicsBody?.contactTestBitMask = ColliderType.cloud
+            cloud2.physicsBody?.collisionBitMask = ColliderType.player
+            
+            cloud3.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: cloud3.size.width, height: cloud3.size.height))
+            cloud3.physicsBody?.affectedByGravity = false
+            cloud3.physicsBody?.contactTestBitMask = ColliderType.cloud
+            cloud3.physicsBody?.collisionBitMask = ColliderType.player
+            
+            darkCloud.physicsBody = SKPhysicsBody(rectangleOfSize: darkCloud.size)
+            darkCloud.physicsBody?.affectedByGravity = false
+            darkCloud.physicsBody?.contactTestBitMask = ColliderType.DarkCloudAndCollectibles
+            darkCloud.physicsBody?.collisionBitMask = ColliderType.player
             
             clouds.append(cloud1)
             clouds.append(cloud2)
@@ -120,7 +140,9 @@ class CloudsController {
     
     }
     
-    
+    func physicsBodyDefined() {
+
+    }
     
     
     
