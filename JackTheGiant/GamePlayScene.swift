@@ -10,19 +10,31 @@ import SpriteKit
 
 class GameplayScene: SKScene {
     
+    var cloudsController = CloudsController()
+    var mainCamera: SKCameraNode?
+    
+    var bg1: BGClass?
+    var bg2: BGClass?
+    var bg3: BGClass?
+    
     var player: Player?
     var canMove = false
     var moveLeft = false
     var center: CGFloat?
+    var distanceBetweenClouds = CGFloat(240)
+    let minX = CGFloat(85)
+    let maxX = CGFloat(392)
+
     
     override func didMove(to view: SKView) {
-        center = (self.scene?.size.width)! / (self.scene?.size.height)!
+        initializeVariables()
         
-        player = self.childNode(withName: "Player") as? Player
     }
 
     override func update(_ currentTime: TimeInterval) {
+        moveCamera()
         managePlayer()
+        manageBackgrounds()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -32,8 +44,10 @@ class GameplayScene: SKScene {
             
             if location.x > center! {
                 moveLeft = false
+                player?.animatePlayer(moveLeft: moveLeft)
             } else {
                 moveLeft = true
+                player?.animatePlayer(moveLeft: moveLeft)
             }
         }
         
@@ -42,11 +56,46 @@ class GameplayScene: SKScene {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         canMove = false
+        player?.stopPlayerAnimation()
+        
+    }
+    
+    func initializeVariables() {
+        center = (self.scene?.size.width)! / (self.scene?.size.height)!
+        
+        player = self.childNode(withName: "Player") as? Player
+        player?.initializePlayerAndAnimations()
+        
+        mainCamera = self.childNode(withName: "Main Camera") as? SKCameraNode!
+        
+        getBackgrounds()
+        
+        CloudsController.arrangeCloudsInSchene(self.scene, distanceBetweenClouds: distanceBetweenClouds, center: center, minX: minX, maxX: maxX, initialClouds: true   )
+    }
+    
+    func getBackgrounds() {
+        bg1 = self.childNode(withName: "BG1") as? BGClass!
+        bg2 = self.childNode(withName: "BG2") as? BGClass!
+        bg3 = self.childNode(withName: "BG3") as? BGClass!
+
+        
     }
     
     func managePlayer() {
         if canMove {
             player?.movePlayer(moveLeft: moveLeft)
         }
+    }
+    
+    func moveCamera() {
+        //self.mainCamera?.position.y = (self.mainCamera?.position.y)! - 3
+        self.mainCamera?.position.y -= 3
+        
+    }
+    
+    func manageBackgrounds() {
+        bg1?.moveBG(camera: mainCamera!)
+        bg2?.moveBG(camera: mainCamera!)
+        bg3?.moveBG(camera: mainCamera!)
     }
 }
