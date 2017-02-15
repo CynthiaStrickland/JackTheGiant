@@ -32,8 +32,10 @@ class Player: SKSpriteNode {
             playerAnimation.append(SKTexture(imageNamed: name))
         }
         
-        self.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: self.size.width, height: self.size.height))
+        self.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: self.size.width - 50, height: self.size.height - 5))
         self.physicsBody?.affectedByGravity = true
+        self.physicsBody?.allowsRotation = false
+        self.physicsBody?.restitution = 0
         self.physicsBody?.categoryBitMask = ColliderType.player
         self.physicsBody?.collisionBitMask = ColliderType.cloud
         self.physicsBody?.contactTestBitMask = ColliderType.darkCloudAndCollectables

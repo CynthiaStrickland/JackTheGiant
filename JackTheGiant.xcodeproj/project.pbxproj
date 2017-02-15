@@ -19,6 +19,7 @@
 		8128550D1E538721004389D8 /* BGClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128550C1E538721004389D8 /* BGClass.swift */; };
 		812855101E538A9A004389D8 /* CloudsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128550F1E538A9A004389D8 /* CloudsController.swift */; };
 		8148B87C1E4FAC6D009B07E9 /* GameplayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8148B87B1E4FAC6C009B07E9 /* GameplayScene.sks */; };
+		815B91DC1E53D56500B41BB8 /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 815B91DB1E53D56500B41BB8 /* MainMenu.sks */; };
 		81A622F21E4D7EFD008555DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A622F11E4D7EFD008555DB /* AppDelegate.swift */; };
 		81A622F61E4D7EFD008555DB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 81A622F51E4D7EFD008555DB /* Actions.sks */; };
 		81A622F81E4D7EFD008555DB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A622F71E4D7EFD008555DB /* GameScene.swift */; };
@@ -96,6 +97,7 @@
 		8128550C1E538721004389D8 /* BGClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGClass.swift; sourceTree = "<group>"; };
 		8128550F1E538A9A004389D8 /* CloudsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudsController.swift; sourceTree = "<group>"; };
 		8148B87B1E4FAC6C009B07E9 /* GameplayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameplayScene.sks; sourceTree = "<group>"; };
+		815B91DB1E53D56500B41BB8 /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
 		81A622EE1E4D7EFD008555DB /* JackTheGiant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JackTheGiant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A622F11E4D7EFD008555DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = JackTheGiant/AppDelegate.swift; sourceTree = "<group>"; };
 		81A622F51E4D7EFD008555DB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			children = (
 				81A622F51E4D7EFD008555DB /* Actions.sks */,
 				8148B87B1E4FAC6C009B07E9 /* GameplayScene.sks */,
+				815B91DB1E53D56500B41BB8 /* MainMenu.sks */,
 			);
 			name = SCENES;
 			path = JackTheGiant;
@@ -526,6 +529,7 @@
 				81A623541E4D8535008555DB /* Pause Button.png in Resources */,
 				81A623411E4D84A9008555DB /* Cloud 3.png in Resources */,
 				81A623321E4D846F008555DB /* Game BG.png in Resources */,
+				815B91DC1E53D56500B41BB8 /* MainMenu.sks in Resources */,
 				81A623021E4D7EFD008555DB /* LaunchScreen.storyboard in Resources */,
 				812855001E52B9EE004389D8 /* Player 4.png in Resources */,
 				81A6236B1E4D854D008555DB /* Quit Button.png in Resources */,
