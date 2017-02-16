@@ -8,10 +8,27 @@
 
 import SpriteKit
 
-class Highscore: SKScene {
+class HighscoreScene: SKScene {
     
     override func didMove(to view: SKView) {
         
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        for touch in touches {
+            
+            let location = touch.location(in: self);
+            
+            if nodes(at: location)[0].name == "Back" {
+                let scene = MainMenu(fileNamed: "MainMenu");
+                scene?.scaleMode = SKSceneScaleMode.aspectFill;
+                self.view?.presentScene(scene!, transition: SKTransition.doorsCloseVertical(withDuration: 1));
+            }
+            
+        }
+        
+    }
+    
 }
+

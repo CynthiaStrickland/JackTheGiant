@@ -23,6 +23,7 @@
 		81287D7A1E54F6BD004A23C1 /* Options.sks in Resources */ = {isa = PBXBuildFile; fileRef = 81287D791E54F6BD004A23C1 /* Options.sks */; };
 		81287D7C1E54F70F004A23C1 /* OptionsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81287D7B1E54F70F004A23C1 /* OptionsScene.swift */; };
 		81287D7E1E54F760004A23C1 /* HighscoreScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81287D7D1E54F760004A23C1 /* HighscoreScene.swift */; };
+		81287D811E562F68004A23C1 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81287D801E562F68004A23C1 /* GameManager.swift */; };
 		8148B87C1E4FAC6D009B07E9 /* GameplayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8148B87B1E4FAC6C009B07E9 /* GameplayScene.sks */; };
 		815B91DC1E53D56500B41BB8 /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 815B91DB1E53D56500B41BB8 /* MainMenu.sks */; };
 		81A622F21E4D7EFD008555DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A622F11E4D7EFD008555DB /* AppDelegate.swift */; };
@@ -106,6 +107,7 @@
 		81287D791E54F6BD004A23C1 /* Options.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Options.sks; sourceTree = "<group>"; };
 		81287D7B1E54F70F004A23C1 /* OptionsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsScene.swift; sourceTree = "<group>"; };
 		81287D7D1E54F760004A23C1 /* HighscoreScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighscoreScene.swift; sourceTree = "<group>"; };
+		81287D801E562F68004A23C1 /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		8148B87B1E4FAC6C009B07E9 /* GameplayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameplayScene.sks; sourceTree = "<group>"; };
 		815B91DB1E53D56500B41BB8 /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
 		81A622EE1E4D7EFD008555DB /* JackTheGiant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JackTheGiant.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -404,6 +406,7 @@
 				81A622F71E4D7EFD008555DB /* GameScene.swift */,
 				81F32AAD1E4FB655004023A3 /* Player.swift */,
 				81287D7B1E54F70F004A23C1 /* OptionsScene.swift */,
+				81287D801E562F68004A23C1 /* GameManager.swift */,
 			);
 			name = "PLAYER CLASSES";
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				81F32AAB1E4FB1A9004023A3 /* GameplayScene.swift in Sources */,
 				812855101E538A9A004389D8 /* CloudsController.swift in Sources */,
 				81A622F81E4D7EFD008555DB /* GameScene.swift in Sources */,
+				81287D811E562F68004A23C1 /* GameManager.swift in Sources */,
 				81A622FA1E4D7EFD008555DB /* GameViewController.swift in Sources */,
 				81F32AAE1E4FB655004023A3 /* Player.swift in Sources */,
 				81287D7C1E54F70F004A23C1 /* OptionsScene.swift in Sources */,
