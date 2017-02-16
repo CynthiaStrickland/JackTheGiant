@@ -10,6 +10,8 @@ import SpriteKit
 
 class Highscore: SKScene {
     
-    
+    override func didMove(to view: SKView) {
+        
+    }
     
 }

@@ -10,4 +10,7 @@ import SpriteKit
 
 class Options: SKScene {
     
+    override func didMove(to view: SKView) {
+        
+    }
 }
