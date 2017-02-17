@@ -24,10 +24,10 @@ class MainMenu: SKScene {
             let location = touch.location(in: self);
 
             if nodes(at: location)[0].name == "Highscore" {
-                let scene = HighscoreScene(fileNamed: "Highscore");
+                let scene = HighscoreScene(fileNamed: "HighscoreScene");
                 scene?.scaleMode = SKSceneScaleMode.aspectFill;
                 print("The Button is Pressed")
-//                self.view?.presentScene(scene!, transition: SKTransition.doorsCloseVertical(withDuration: 1));
+                self.view?.presentScene(scene!, transition: SKTransition.doorsCloseVertical(withDuration: 1));
             }
             
 //            if nodes(at: location)[0].name == "Options" {
