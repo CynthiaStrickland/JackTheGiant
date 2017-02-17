@@ -13,8 +13,7 @@ class MainMenu: SKScene {
     var highscoreBtn: SKSpriteNode?
     
     override func didMove(to view: SKView) {
-        highscoreBtn = self.childNode(withName: "Highscore") as? SKSpriteNode!
-        
+        GameManager.instance.initializeGameData()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -29,21 +28,18 @@ class MainMenu: SKScene {
 
                 let scene = GameplayScene(fileNamed: "GameplayScene");
                 scene?.scaleMode = SKSceneScaleMode.aspectFill;
-                print("The Start Game Button is Pressed")
                 self.view?.presentScene(scene!, transition: SKTransition.doorsCloseVertical(withDuration: 1));
             }
             
             if nodes(at: location)[0].name == "Highscore" {
                 let scene = HighscoreScene(fileNamed: "Highscore");
                 scene?.scaleMode = SKSceneScaleMode.aspectFill;
-                print("The Highscore Button is Pressed")
                 self.view?.presentScene(scene!, transition: SKTransition.doorsCloseVertical(withDuration: 1));
             }
             
             if nodes(at: location)[0].name == "Options" {
                 let scene = OptionScene(fileNamed: "Options");
                 scene?.scaleMode = SKSceneScaleMode.aspectFill;
-                print("The Options Button is Pressed")
                 self.view?.presentScene(scene!, transition: SKTransition.doorsCloseVertical(withDuration: 1));
             }
 //

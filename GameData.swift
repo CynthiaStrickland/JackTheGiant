@@ -8,26 +8,6 @@
 
 import SpriteKit
 
-//class GameData {
-//    
-//    private var easyDifficultyScore = Int32()
-//    private var mediumDifficultyScore = Int32()
-//    private var hardDifficultyScore = Int32()
-//
-//    //Store Coin Score
-//    private var easyDifficultyCoinScore = Int32()
-//    private var mediumDifficultyCoinScore = Int32()
-//    private var hardDifficultyCoinScore = Int32()
-//    
-//    private var easyDifficulty = false
-//    private var mediumDifficulty = false
-//    private var hardDifficulty = false
-//
-//    private var isMusicOn = false
-//    
-//
-//}
-
 class GameData: NSObject, NSCoding {
     
     struct Keys {
@@ -62,19 +42,20 @@ class GameData: NSObject, NSCoding {
     
     fileprivate var isMusicOn = false;
     
+    
+    //MARK:  aDECODER, ENCODE
+    
     override init() {}
     
     required init?(coder aDecoder: NSCoder) {
         //        super.init();
         
         self.easyDifficultyScore = aDecoder.decodeInt32(forKey: Keys.EasyDifficultyScore);
-        self.easyDifficultyCoinScore = aDecoder.decodeInt32(forKey: Keys.EasyDifficultyCoinScore);
-        
         self.mediumDifficultyScore = aDecoder.decodeInt32(forKey: Keys.MediumDifficultyScore);
-        
-        self.mediumDifficultyCoinScore = aDecoder.decodeInt32(forKey: Keys.MediumDifficultyCoinScore);
-        
         self.hardDifficultyScore = aDecoder.decodeInt32(forKey: Keys.HardDifficultyScore);
+        
+        self.easyDifficultyCoinScore = aDecoder.decodeInt32(forKey: Keys.EasyDifficultyCoinScore);
+        self.mediumDifficultyCoinScore = aDecoder.decodeInt32(forKey: Keys.MediumDifficultyCoinScore);
         self.hardDifficultyCoinScore = aDecoder.decodeInt32(forKey: Keys.HardDifficultyCoinScore);
         
         self.easyDifficulty = aDecoder.decodeBool(forKey: Keys.EasyDifficulty);
@@ -88,15 +69,11 @@ class GameData: NSObject, NSCoding {
     func encode(with aCoder: NSCoder) {
         
         aCoder.encodeCInt(self.easyDifficultyScore, forKey: Keys.EasyDifficultyScore);
-        
-        aCoder.encodeCInt(self.easyDifficultyCoinScore, forKey: Keys.EasyDifficultyCoinScore);
-        
         aCoder.encodeCInt(self.mediumDifficultyScore, forKey: Keys.MediumDifficultyScore);
-        
-        aCoder.encodeCInt(self.mediumDifficultyCoinScore, forKey: Keys.MediumDifficultyCoinScore);
-        
         aCoder.encodeCInt(self.hardDifficultyScore, forKey: Keys.HardDifficultyScore);
-        
+
+        aCoder.encodeCInt(self.easyDifficultyCoinScore, forKey: Keys.EasyDifficultyCoinScore);
+        aCoder.encodeCInt(self.mediumDifficultyCoinScore, forKey: Keys.MediumDifficultyCoinScore);
         aCoder.encodeCInt(self.hardDifficultyCoinScore, forKey: Keys.HardDifficultyCoinScore);
         
         aCoder.encode(self.easyDifficulty, forKey: Keys.EasyDifficulty);

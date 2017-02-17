@@ -38,17 +38,15 @@ class GamePlayController {
             coinText?.text = "x\(String(describing: coin))"
             lifeText?.text = "x\(String(describing: life))"
             
-        } else if GameManager.instance.gameRestartedPlayerDided {
+        } else if GameManager.instance.gameRestartedPlayerDied {
             
-            GameManager.instance.gameRestartedPlayerDided = false
+            GameManager.instance.gameRestartedPlayerDied = false
             
             scoreText?.text = "\(String(describing: score))"
             coinText?.text = "x\(String(describing: coin))"
             lifeText?.text = "x\(String(describing: life))"
         }
     }
-    
-    
     
     func incrementScore() {
         score += 1

@@ -169,8 +169,6 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         cloudsController.arrangeCloudsInScene(scene: self.scene!, distaneBetweenClouds: distanceBetweenClouds, center: center!, minX: minX, maxX: maxX, player: player!, initialClouds: true)
         
         cameraDistanceBeforeCreatingNewClouds = (mainCamera?.position.y)! - 400
-        
-        print("The random number is \(cloudsController.randomBetweenNumbers(firstNum: 2, secondNum: 5))")
     }
     
     func getBackgrounds() {
