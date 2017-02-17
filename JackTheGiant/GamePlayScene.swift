@@ -10,7 +10,7 @@ import SpriteKit
 
 let cloudsController = CloudsController()
 
-class GameplayScene: SKScene {
+class GameplayScene: SKScene, SKPhysicsContactDelegate {
     
     var mainCamera: SKCameraNode?
     var player: Player?
@@ -71,6 +71,26 @@ class GameplayScene: SKScene {
         
     }
     
+    func beginContact(contact: SKPhysicsContact) {
+        
+        var firstBody = SKPhysicsBody()
+        var secondBody = SKPhysicsBody()
+        
+        if contact.bodyA.node?.name == "Player" {
+            
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        } else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        if firstBody.node?.name == "Player" && secondBody.node?.name == "Life" {
+            
+        }
+        
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     
         for touch in touches {
@@ -113,6 +133,9 @@ class GameplayScene: SKScene {
     }
     
     func initializeVariables() {
+        
+        physicsWorld.contactDelegate = self
+        
         center = (self.scene?.size.width)! / (self.scene?.size.height)!
         
         player = self.childNode(withName: "Player") as? Player
