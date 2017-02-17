@@ -20,7 +20,7 @@ class CollectablesController {
         var collectable = SKSpriteNode()
         
         if Int(randomBetweenNumbers(firstNum: 0, secondNum: 7)) >= 4 {
-            if GamePlayController.instance.life! < 2 {
+            if GamePlayController.instance.life < 2 {
                 collectable = SKSpriteNode.init(imageNamed: "Life")
                 collectable.name = "Life"
                 collectable.physicsBody = SKPhysicsBody(rectangleOf: collectable.size)

@@ -171,15 +171,23 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func getBackgrounds() {
-        bg1 = self.childNode(withName: "BG1") as? BGClass!
-        bg2 = self.childNode(withName: "BG2") as? BGClass!
-        bg3 = self.childNode(withName: "BG3") as? BGClass!
+        bg1 = self.childNode(withName: "BG 1") as? BGClass!
+        bg2 = self.childNode(withName: "BG 2") as? BGClass!
+        bg3 = self.childNode(withName: "BG 3") as? BGClass!
     }
     
     func managePlayer() {
         if canMove {
             player?.movePlayer(moveLeft: moveLeft)
         }
+        //PLAYER OUT OF SCENE 
+        if (player?.position.y)! - (player?.size.height)! * 3.7 > (mainCamera?.position.y)! {
+            self.scene?.isPaused = true
+        }
+        if (player?.position.y)! - (player?.size.height)! * 3.7 < (mainCamera?.position.y)! {
+            self.scene?.isPaused = true
+        }
+        
     }
     
     func moveCamera() {
@@ -200,9 +208,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
             cloudsController.arrangeCloudsInScene(scene: self, distaneBetweenClouds: distanceBetweenClouds, center: center!, minX: minX, maxX: maxX, player: player!, initialClouds: false)
             
             checkForChildsOffOfScreen()
-
         }
-        
     }
     
     func checkForChildsOffOfScreen() {
@@ -211,7 +217,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
             if child.position.y > (mainCamera?.position.y)! + (self.scene?.size.height)! {
                 
                 let childName = child.name?.components(separatedBy: " ")   //Creates an array
-                if childName?[0] != "BG" {
+                if childName![0] != "BG" {
                     child.removeFromParent()
                 }
             }
