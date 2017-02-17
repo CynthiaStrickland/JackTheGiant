@@ -25,4 +25,26 @@ class GamePlayController {
     var coin: Int?
     var life: Int?
  
+    func initializeVariables() {
+        if GameManager.instance.gameStartedFromMainMenu {
+            
+            GameManager.instance.gameStartedFromMainMenu = false
+            
+            score = 0
+            coin = 0
+            life = 2
+            
+            scoreText?.text = "\(String(describing: score!))"
+            coinText?.text = "x\(String(describing: coin!))"
+            lifeText?.text = "x\(String(describing: life!))"
+            
+        } else if GameManager.instance.gameRestartedPlayerDided {
+            
+            GameManager.instance.gameRestartedPlayerDided = false
+            
+            scoreText?.text = "\(String(describing: score!))"
+            coinText?.text = "x\(String(describing: coin!))"
+            lifeText?.text = "x\(String(describing: life!))"
+        }
+    }
 }

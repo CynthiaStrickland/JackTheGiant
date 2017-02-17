@@ -22,9 +22,11 @@ class MainMenu: SKScene {
         for touch in touches {
             
             let location = touch.location(in: self);
-
+            
             if nodes(at: location)[0].name == "Start Game" {
                 
+                GameManager.instance.gameStartedFromMainMenu = true
+
                 let scene = GameplayScene(fileNamed: "GameplayScene");
                 scene?.scaleMode = SKSceneScaleMode.aspectFill;
                 print("The Start Game Button is Pressed")

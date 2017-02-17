@@ -122,6 +122,8 @@ class GameplayScene: SKScene {
         
         getBackgrounds()
         getLabels()
+        GamePlayController.instance.initializeVariables()
+        
         
         cloudsController.arrangeCloudsInScene(scene: self.scene!, distaneBetweenClouds: distanceBetweenClouds, center: center!, minX: minX, maxX: maxX, player: player!, initialClouds: true)
         
@@ -168,8 +170,8 @@ class GameplayScene: SKScene {
     }
     
     func getLabels() {
-        GamePlayController.instance.scoreText = self.childNode(withName: "Score Text") as? SKLabelNode
-        GamePlayController.instance.coinText = self.childNode(withName: "Coin Score") as? SKLabelNode
-        GamePlayController.instance.lifeText = self.childNode(withName: "Life Score") as? SKLabelNode
+        GamePlayController.instance.scoreText = self.mainCamera?.childNode(withName: "Score Text") as? SKLabelNode
+        GamePlayController.instance.coinText = self.mainCamera?.childNode(withName: "Coin Score") as? SKLabelNode
+        GamePlayController.instance.lifeText = self.mainCamera?.childNode(withName: "Life Score") as? SKLabelNode
     }
 }
