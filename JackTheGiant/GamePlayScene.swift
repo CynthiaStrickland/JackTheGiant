@@ -38,16 +38,16 @@ class GameplayScene: SKScene {
         pausePanel?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         pausePanel?.xScale = 1.6
         pausePanel?.yScale = 1.6
-        pausePanel?.zPosition = 5
+        pausePanel?.zPosition = 6
         pausePanel?.position = CGPoint(x: (self.mainCamera?.frame.size.width)! / 2, y: (self.mainCamera?.frame.height)! / 2)
         
         resumeButton.name = "Resume"
-        resumeButton.zPosition = 5
+        resumeButton.zPosition = 6
         resumeButton.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         resumeButton.position = CGPoint(x: (pausePanel?.position.x)!, y: (pausePanel?.position.y)! + 25)
         
         quitButton.name = "Quit"
-        quitButton.zPosition = 5
+        quitButton.zPosition = 6
         quitButton.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         quitButton.position = CGPoint(x: (pausePanel?.position.x)!, y: (pausePanel?.position.y)! - 45)
         
@@ -94,7 +94,12 @@ class GameplayScene: SKScene {
             if nodes(at: location)[0].name == "Resume" {
                 self.pausePanel?.removeFromParent()
                 self.scene?.isPaused = false
-                
+            }
+            
+            if nodes(at: location)[0].name == "Quit" {
+                let scene = MainMenu(fileNamed: "MainMenu");
+                scene?.scaleMode = SKSceneScaleMode.aspectFill;
+                self.view?.presentScene(scene!, transition: SKTransition.doorsCloseVertical(withDuration: 0.35));
             }
         }
         
@@ -116,6 +121,7 @@ class GameplayScene: SKScene {
         mainCamera = self.childNode(withName: "Main Camera") as? SKCameraNode!
         
         getBackgrounds()
+        getLabels()
         
         cloudsController.arrangeCloudsInScene(scene: self.scene!, distaneBetweenClouds: distanceBetweenClouds, center: center!, minX: minX, maxX: maxX, player: player!, initialClouds: true)
         
@@ -159,5 +165,11 @@ class GameplayScene: SKScene {
         }
         
         
+    }
+    
+    func getLabels() {
+        GamePlayController.instance.scoreText = self.childNode(withName: "Score Text") as? SKLabelNode
+        GamePlayController.instance.coinText = self.childNode(withName: "Coin Score") as? SKLabelNode
+        GamePlayController.instance.lifeText = self.childNode(withName: "Life Score") as? SKLabelNode
     }
 }

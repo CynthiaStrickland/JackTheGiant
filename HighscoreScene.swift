@@ -23,7 +23,7 @@ class HighscoreScene: SKScene {
             if nodes(at: location)[0].name == "Back" {
                 let scene = MainMenu(fileNamed: "MainMenu");
                 scene?.scaleMode = SKSceneScaleMode.aspectFill;
-                self.view?.presentScene(scene!, transition: SKTransition.doorsCloseVertical(withDuration: 1));
+                self.view?.presentScene(scene!, transition: SKTransition.doorsCloseVertical(withDuration: 0.35));
             }
             
         }
