@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		812549F51E577D6C00FE94E0 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812549F41E577D6C00FE94E0 /* GameController.swift */; };
 		812549F71E57823F00FE94E0 /* CollectablesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812549F61E57823F00FE94E0 /* CollectablesController.swift */; };
+		812549F91E57AAA400FE94E0 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812549F81E57AAA400FE94E0 /* GameData.swift */; };
 		812854FA1E52B9C7004389D8 /* Player 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 812854F91E52B9C7004389D8 /* Player 1.png */; };
 		812854FC1E52B9D8004389D8 /* Player 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 812854FB1E52B9D8004389D8 /* Player 2.png */; };
 		812854FE1E52B9E5004389D8 /* Player 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 812854FD1E52B9E5004389D8 /* Player 3.png */; };
@@ -94,6 +95,7 @@
 /* Begin PBXFileReference section */
 		812549F41E577D6C00FE94E0 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		812549F61E57823F00FE94E0 /* CollectablesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectablesController.swift; sourceTree = "<group>"; };
+		812549F81E57AAA400FE94E0 /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		812854F91E52B9C7004389D8 /* Player 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Player 1.png"; path = "JackTheGiant/Assets.xcassets/Player 1.imageset/Player 1.png"; sourceTree = "<group>"; };
 		812854FB1E52B9D8004389D8 /* Player 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Player 2.png"; path = "JackTheGiant/Assets.xcassets/Player 2.imageset/Player 2.png"; sourceTree = "<group>"; };
 		812854FD1E52B9E5004389D8 /* Player 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Player 3.png"; path = "JackTheGiant/Assets.xcassets/Player 3.imageset/Player 3.png"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				812549F41E577D6C00FE94E0 /* GameController.swift */,
 				8128550F1E538A9A004389D8 /* CloudsController.swift */,
 				812549F61E57823F00FE94E0 /* CollectablesController.swift */,
+				812549F81E57AAA400FE94E0 /* GameData.swift */,
 			);
 			name = "GAME CONTROLLERS & MANAGERS";
 			sourceTree = "<group>";
@@ -611,6 +614,7 @@
 				812855101E538A9A004389D8 /* CloudsController.swift in Sources */,
 				812549F51E577D6C00FE94E0 /* GameController.swift in Sources */,
 				81A622FA1E4D7EFD008555DB /* GameViewController.swift in Sources */,
+				812549F91E57AAA400FE94E0 /* GameData.swift in Sources */,
 				81F32AAE1E4FB655004023A3 /* Player.swift in Sources */,
 				81287D7C1E54F70F004A23C1 /* OptionScene.swift in Sources */,
 				81A622F21E4D7EFD008555DB /* AppDelegate.swift in Sources */,

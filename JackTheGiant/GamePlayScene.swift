@@ -30,6 +30,9 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
 
     private var pausePanel: SKSpriteNode?
     
+    private let playerMinX = CGFloat(-214)
+    private let playerMaxX = CGFloat(214)
+    
     func createPausePanel() {
         pausePanel = SKSpriteNode(imageNamed: "Pause Menu")
         let resumeButton = SKSpriteNode(imageNamed: "Resume Button")
@@ -180,7 +183,17 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         if canMove {
             player?.movePlayer(moveLeft: moveLeft)
         }
-        //PLAYER OUT OF SCENE 
+        
+        //PLAYER OUT OF SCENE
+        
+        if (player?.position.x)! > playerMaxX {
+            player?.position.x = playerMaxX
+        }
+        
+        if (player?.position.x)! < playerMinX {
+            player?.position.x = playerMinX
+        }
+        
         if (player?.position.y)! - (player?.size.height)! * 3.7 > (mainCamera?.position.y)! {
             self.scene?.isPaused = true
         }
