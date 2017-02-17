@@ -11,11 +11,9 @@ import SpriteKit
 class MainMenu: SKScene {
     
     var highscoreBtn: SKSpriteNode?
-    var optionBtn: SKSpriteNode?
     
     override func didMove(to view: SKView) {
         highscoreBtn = self.childNode(withName: "Highscore") as? SKSpriteNode!
-//        optionBtn = self.childNode(withName: "Option") as? SKSpriteNode!
         
     }
     
@@ -25,17 +23,25 @@ class MainMenu: SKScene {
             
             let location = touch.location(in: self);
 
+            if nodes(at: location)[0].name == "Start Game" {
+                
+                let scene = GameplayScene(fileNamed: "GameplayScene");
+                scene?.scaleMode = SKSceneScaleMode.aspectFill;
+                print("The Start Game Button is Pressed")
+                self.view?.presentScene(scene!, transition: SKTransition.doorsCloseVertical(withDuration: 1));
+            }
+            
             if nodes(at: location)[0].name == "Highscore" {
                 let scene = HighscoreScene(fileNamed: "Highscore");
                 scene?.scaleMode = SKSceneScaleMode.aspectFill;
-                print("The Button is Pressed")
+                print("The Highscore Button is Pressed")
                 self.view?.presentScene(scene!, transition: SKTransition.doorsCloseVertical(withDuration: 1));
             }
             
             if nodes(at: location)[0].name == "Options" {
                 let scene = OptionScene(fileNamed: "Options");
                 scene?.scaleMode = SKSceneScaleMode.aspectFill;
-                print("The Button is Pressed")
+                print("The Options Button is Pressed")
                 self.view?.presentScene(scene!, transition: SKTransition.doorsCloseVertical(withDuration: 1));
             }
 //
