@@ -38,7 +38,7 @@ class GameplayScene: SKScene {
         pausePanel?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         pausePanel?.xScale = 1.6
         pausePanel?.yScale = 1.6
-        pausePanel?.zPosition = 4
+        pausePanel?.zPosition = 5
         pausePanel?.position = CGPoint(x: (self.mainCamera?.frame.size.width)! / 2, y: (self.mainCamera?.frame.height)! / 2)
         
         resumeButton.name = "Resume"
@@ -76,12 +76,25 @@ class GameplayScene: SKScene {
         for touch in touches {
             let location = touch.location(in: self)
             
-            if location.x > center! {
-                moveLeft = false
-                player?.animatePlayer(moveLeft: moveLeft)
-            } else {
-                moveLeft = true
-                player?.animatePlayer(moveLeft: moveLeft)
+            if self.scene?.isPaused == false {
+                if location.x > center! {
+                    moveLeft = false
+                    player?.animatePlayer(moveLeft: moveLeft)
+                } else {
+                    moveLeft = true
+                    player?.animatePlayer(moveLeft: moveLeft)
+                }
+            }
+            if nodes(at: location)[0].name == "Pause" {
+                self.scene?.isPaused = true
+                
+                createPausePanel()
+            }
+            
+            if nodes(at: location)[0].name == "Resume" {
+                self.pausePanel?.removeFromParent()
+                self.scene?.isPaused = false
+                
             }
         }
         
