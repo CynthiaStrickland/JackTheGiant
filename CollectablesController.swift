@@ -25,19 +25,20 @@ class CollectablesController {
                 collectable.name = "Life"
                 collectable.physicsBody = SKPhysicsBody(rectangleOf: collectable.size)
             } else {
+                collectable.name = "Empty" }
+            } else {
                 collectable = SKSpriteNode(imageNamed: "Coin")
                 collectable.name = "Coin"
                 collectable.physicsBody = SKPhysicsBody(circleOfRadius: collectable.size.height / 2)
             }
+                collectable.physicsBody?.affectedByGravity = false
+                collectable.physicsBody?.categoryBitMask = ColliderType.darkCloudAndCollectables
+                collectable.physicsBody?.collisionBitMask = ColliderType.player
+                collectable.zPosition = 2
+                
+                return collectable
         }
-        
-        collectable.physicsBody?.affectedByGravity = false
-        collectable.physicsBody?.categoryBitMask = ColliderType.darkCloudAndCollectables
-        collectable.physicsBody?.collisionBitMask = ColliderType.player
-        collectable.zPosition = 2
-        
-        return collectable
-        }
-    
     }
+
+    
 

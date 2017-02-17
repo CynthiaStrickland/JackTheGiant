@@ -23,6 +23,9 @@ class Player: SKSpriteNode {
     private var playerAnimation = [SKTexture]()
     private var animatePlayerAction = SKAction()
     
+    private var lastYPosition = CGFloat()
+    
+    
     func initializePlayerAndAnimations() {
         
         textureAtlas = SKTextureAtlas(named: "Player.atlas")
@@ -44,6 +47,8 @@ class Player: SKSpriteNode {
                                                timePerFrame: 0.08,
                                                resize: true,
                                                restore: false)
+        
+        lastYPosition = self.position.y
         
     }
     
@@ -78,6 +83,17 @@ class Player: SKSpriteNode {
             self.position.x += 7
 
         }
+        
+    }
+    
+    func setScore() {
+        
+        if self.position.y < lastYPosition {
+            GamePlayController.instance.incrementScore()
+            lastYPosition = self.position.y
+            
+        }
+        
         
     }
 }

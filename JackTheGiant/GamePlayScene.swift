@@ -54,9 +54,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         pausePanel?.addChild(resumeButton)
         pausePanel?.addChild(quitButton)
         
-        self.mainCamera?.addChild(pausePanel!)
-        
-        
+        self.mainCamera?.addChild(pausePanel!) 
     }
     
     override func didMove(to view: SKView) {
@@ -68,7 +66,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         managePlayer()
         manageBackgrounds()
         createNewClouds()
-        
+        player?.setScore()
     }
     
     func beginContact(contact: SKPhysicsContact) {
@@ -86,9 +84,26 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         }
         
         if firstBody.node?.name == "Player" && secondBody.node?.name == "Life" {
+            //Play Sound
             
-        }
         
+            //Increment the Score
+            GamePlayController.instance.incrementLife()
+            
+            //Remove Life from Game
+            secondBody.node?.removeFromParent()
+            
+        } else if firstBody.node?.name == "Player" && secondBody.node?.name == "Coin" {
+            //Increment the Score
+            GamePlayController.instance.incrementCoin()
+            
+            //Play Sound
+            secondBody.node?.removeFromParent()
+            
+        } else if firstBody.node?.name == "Player" && secondBody.node?.name == "Dark Cloud"{
+            secondBody.node?.removeFromParent()
+            //Kill Player
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -159,8 +174,6 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         bg1 = self.childNode(withName: "BG1") as? BGClass!
         bg2 = self.childNode(withName: "BG2") as? BGClass!
         bg3 = self.childNode(withName: "BG3") as? BGClass!
-
-        
     }
     
     func managePlayer() {
@@ -182,11 +195,26 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func createNewClouds() {
-        
         if cameraDistanceBeforeCreatingNewClouds > (mainCamera?.position.y)! - 400 {
             cameraDistanceBeforeCreatingNewClouds = (mainCamera?.position.y)! - 400
-            
             cloudsController.arrangeCloudsInScene(scene: self, distaneBetweenClouds: distanceBetweenClouds, center: center!, minX: minX, maxX: maxX, player: player!, initialClouds: false)
+            
+            checkForChildsOffOfScreen()
+
+        }
+        
+    }
+    
+    func checkForChildsOffOfScreen() {
+        for child in children {
+            
+            if child.position.y > (mainCamera?.position.y)! + (self.scene?.size.height)! {
+                
+                let childName = child.name?.components(separatedBy: " ")   //Creates an array
+                if childName?[0] != "BG" {
+                    child.removeFromParent()
+                }
+            }
         }
         
         
