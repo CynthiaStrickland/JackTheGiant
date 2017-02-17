@@ -28,6 +28,36 @@ class GameplayScene: SKScene {
     let minX = CGFloat(-157)
     let maxX = CGFloat(157)
 
+    private var pausePanel: SKSpriteNode?
+    
+    func createPausePanel() {
+        pausePanel = SKSpriteNode(imageNamed: "Pause Menu")
+        let resumeButton = SKSpriteNode(imageNamed: "Resume Button")
+        let quitButton = SKSpriteNode(imageNamed: "Quit Button 2")
+        
+        pausePanel?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        pausePanel?.xScale = 1.6
+        pausePanel?.yScale = 1.6
+        pausePanel?.zPosition = 4
+        pausePanel?.position = CGPoint(x: (self.mainCamera?.frame.size.width)! / 2, y: (self.mainCamera?.frame.height)! / 2)
+        
+        resumeButton.name = "Resume"
+        resumeButton.zPosition = 5
+        resumeButton.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        resumeButton.position = CGPoint(x: (pausePanel?.position.x)!, y: (pausePanel?.position.y)! + 25)
+        
+        quitButton.name = "Quit"
+        quitButton.zPosition = 5
+        quitButton.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        quitButton.position = CGPoint(x: (pausePanel?.position.x)!, y: (pausePanel?.position.y)! - 45)
+        
+        pausePanel?.addChild(resumeButton)
+        pausePanel?.addChild(quitButton)
+        
+        self.mainCamera?.addChild(pausePanel!)
+        
+        
+    }
     
     override func didMove(to view: SKView) {
         initializeVariables()
