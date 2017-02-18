@@ -21,16 +21,16 @@ class GamePlayController {
     var coinText: SKLabelNode?
     var lifeText: SKLabelNode?
     
-    var score: Int = 0
-    var coin: Int = 0
-    var life: Int = 0
+    var score: Int32 = 0
+    var coin: Int32 = 0
+    var life: Int32 = 0
  
     func initializeVariables() {
         if GameManager.instance.gameStartedFromMainMenu {
             
             GameManager.instance.gameStartedFromMainMenu = false
             
-            score = -1
+            score = 0
             coin = 0
             life = 2
             

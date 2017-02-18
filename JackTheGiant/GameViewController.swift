@@ -29,9 +29,9 @@ class GameViewController: UIViewController {
             
             //You do not want to see these things in production
             view.showsPhysics = true
-            view.showsFPS = true
-            view.showsNodeCount = true
-            view.showsPhysics = true
+            view.showsFPS = false
+            view.showsNodeCount = false
+            view.showsPhysics = false
         }
     }
 

@@ -39,7 +39,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMove(to view: SKView) {
         initializeVariables()
-        setCameraSpeed()        
+        setCameraSpeed()
     }
     
     func initializeVariables() {
@@ -326,7 +326,6 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
         coinLabel.position = CGPoint(x: endScorePanel.position.x - 60, y: endScorePanel.position.y - 105);
         
         mainCamera?.addChild(endScorePanel);
-        
     }
     
     @objc
@@ -337,6 +336,7 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
             let scene = GameplayScene(fileNamed: "GameplayScene");
             scene?.scaleMode = SKSceneScaleMode.aspectFill;
             self.view?.presentScene(scene!, transition: SKTransition.doorsCloseVertical(withDuration: 1));
+      
         } else {
             if GameManager.instance.getEasyDifficulty() {
                 let highscore = GameManager.instance.getEasyDifficultyScore();
@@ -373,7 +373,6 @@ class GameplayScene: SKScene, SKPhysicsContactDelegate {
                 if coinScore < Int32(GamePlayController.instance.coin) {
                     GameManager.instance.setHardDifficultyCoinScore(Int32(GamePlayController.instance.coin));
                 }
-                
             }
             
             GameManager.instance.saveData();

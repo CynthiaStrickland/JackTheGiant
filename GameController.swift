@@ -41,9 +41,7 @@ class GameManager {
                 
                 saveData();
             }
-            
             loadData();
-            
         }
 
         //MARK:   NSKeyedUnarchiver
@@ -62,9 +60,7 @@ class GameManager {
             let manager = FileManager.default;
             let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first as URL!;
             return url!.appendingPathComponent("Game Data").path;
-            }
-
-    
+        }
     //MARK : FUNCTIONS SETTING & GETTING
     
         func setEasyDifficultyScore(_ easyDifficultyScore: Int32) {

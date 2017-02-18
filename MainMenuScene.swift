@@ -42,13 +42,11 @@ class MainMenu: SKScene {
                 scene?.scaleMode = SKSceneScaleMode.aspectFill;
                 self.view?.presentScene(scene!, transition: SKTransition.doorsCloseVertical(withDuration: 1));
             }
-//
-//            if nodes(at: location)[0].name == "Music" {
-//                handleMusicButton();
-//            }
-//            
-        }
-        
+
+            if nodes(at: location)[0].name == "Music" {
+                handleMusicButton();
+            }
+        } 
     }
     
     func handleMusicButton() {
