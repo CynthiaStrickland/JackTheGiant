@@ -77,7 +77,7 @@ class OptionScene: SKScene {
             }
             
             if nodes(at: location)[0] == mediumBtn {
-                mediumBtn!.position.y = easyBtn!.position.y;
+                sign!.position.y = mediumBtn!.position.y;
                 setDifficulty("medium");
             }
             
